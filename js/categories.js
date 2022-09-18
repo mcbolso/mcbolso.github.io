@@ -141,3 +141,23 @@ document.addEventListener("DOMContentLoaded", function(e){
         showCategoriesList();
     });
 });
+
+
+function mostrarEmail(){
+    document.getElementById("mostrarEmail").innerHTML = `<li class="nav-item" id="mostrarEmail">
+    <a class="nav-link active"> ${localStorage.getItem('user')} </a>
+  </li>`;
+}
+
+
+function sesionActiva(){
+if(localStorage.getItem('user')){
+    mostrarEmail();
+}
+else{
+    document.getElementById("mostrarEmail").innerHTML = `<a class="nav-link active" href="login.html">Login</a>`;
+}
+};
+
+
+sesionActiva();
