@@ -60,6 +60,9 @@ fetch(PRODUCTS_URL + localStorage.getItem("catID") + EXT_TYPE)
     });
 
 
+
+    
+
     document.getElementById("clearRangeFilter").addEventListener("click", function(){
         document.getElementById("rangeFilterCountMin").value = "";
         document.getElementById("rangeFilterCountMax").value = "";
@@ -72,6 +75,13 @@ fetch(PRODUCTS_URL + localStorage.getItem("catID") + EXT_TYPE)
 
 
 });
+
+
+
+
+
+
+
 
 
 function sortProductos(criteria, array){
@@ -105,7 +115,10 @@ function sortProductos(criteria, array){
 
 
 
-
+function setProdId(id) {
+    localStorage.setItem("prodID", id);
+    window.location = "product-info.html"
+}
 
 
 
@@ -119,7 +132,7 @@ function mostrarCategorias(array){
     for(let i=0; i<array.length; i++){
         if (((minCount == undefined) || (minCount != undefined && parseInt(array[i].cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(array[i].cost) <= maxCount))){
-                lista += `<div class="list-group-item list-group-item-action cursor-active">
+                lista += `<div onclick="setProdId(${array[i].id})" class="list-group-item list-group-item-action cursor-active">
                 <div class="row">
                     <div class="col-3">
                         <img src="${array[i].image}" alt="${array[i].description}" class="img-thumbnail">
