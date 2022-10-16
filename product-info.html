@@ -30,38 +30,49 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-            <li class="nav-item" id="mostrarEmail">
-              <a class="nav-link active" href="login.html">Login</a>
-          </li>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" href="login.html" id="mostrarEmail">Login</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="sr-only"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+              <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+              <a class="dropdown-item" href="index.html" onclick="cerrarSesion()">Cerrar Sesion</a>
+            </ul>
+          </div>
+
         </ul>
       </div>
     </div>
   </nav>
   <main>
 
-    
+
     <div class="container">
-        <h1 id="titulo"></h1><br>
-        <strong>Descripcion</strong>
-        <p id="descripcion"></p>
-        <strong>Precio</strong>
-        <p id="precio"></p>
-        <strong>Categorias</strong>
-        <p id="categorias"></p>
-        <strong>Cantidad de vendidos</strong>
-        <p id="vendidos"></p>
-        <strong>Imagenes ilustrativas</strong>
-        <p id="imagenes"></p>
-        <h4 class="alert-heading"></h4>
-    
-      <div id="comentarios"> 
+      <h1 id="titulo"></h1><br>
+      <strong>Descripcion</strong>
+      <p id="descripcion"></p>
+      <strong>Precio</strong>
+      <p id="precio"></p>
+      <strong>Categorias</strong>
+      <p id="categorias"></p>
+      <strong>Cantidad de vendidos</strong>
+      <p id="vendidos"></p>
+      <strong>Imagenes ilustrativas</strong>
+      <p id="imagenes"></p>
+      <h4 class="alert-heading"></h4>
+
+
+      <div id="comentarios">
         <h4>Comentarios</h4>
       </div>
       <br>
       <h4>Comentar</h3>
-      <div>
-        
-          
+        <div>
+
+
           <div class="form-group">
             <label for="exampleFormControlSelect1">Puntuacion</label>
             <select class="form-control" id="exampleFormControlSelect1">
@@ -78,21 +89,21 @@
           </div> <br>
           <button type="submit" class="btn btn-dark" id="comment-btn" style="width:10%">Enviar</button>
 
-        
+        </div>
+        <br>
+        <div class="container">
+          <h4>Productos relacionados</h4>
+          <div class="row" id="productosRelacionados">
 
+          </div>
 
+        </div>
 
-
-
-
-
-
-
-
-      </div>
 
 
     </div>
+
+
 
   </main>
   <footer class="text-muted">

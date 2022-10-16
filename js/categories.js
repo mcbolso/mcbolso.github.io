@@ -160,4 +160,9 @@ else{
 };
 
 
+function cerrarSesion(){
+localStorage.removeItem('user');
+}
+
+
 sesionActiva();

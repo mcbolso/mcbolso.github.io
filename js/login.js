@@ -23,17 +23,10 @@ const button = document.getElementById("buttonIniciar");
 button.onclick = validacion;
 
 
-// document.getElementById("buttonIniciar").addEventListener("click", () => {
-//    localStorage.setItem('user', document.getElementById("form2Example1").value);
-//    localStorage.getItem('user';)
-//})
-
-
 
 function mostrarEmail(){
     document.getElementById("mostrarEmail").innerHTML = `<li class="nav-item" id="mostrarEmail">
-    <a class="nav-link active"> ${localStorage.getItem('user')} </a>
-  </li>`;
+    <a class="nav-link active"> ${localStorage.getItem('user')} </a></li>`;
 }
 
 
@@ -45,6 +38,11 @@ else{
     document.getElementById("mostrarEmail").innerHTML = `<a class="nav-link active" href="login.html">Login</a>`;
 }
 };
+
+
+function cerrarSesion(){
+localStorage.removeItem('user');
+}
 
 
 sesionActiva();
