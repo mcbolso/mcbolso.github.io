@@ -41,12 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
 });
 
 fetch(PRODUCT_INFO_COMMENTS_URL + localStorage.getItem("prodID") + EXT_TYPE)
