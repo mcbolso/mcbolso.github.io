@@ -89,6 +89,17 @@ function mostrarTotal(){
 }
 
 
+if (localStorage.user != "") {
+    document.getElementById("mostrarEmail").innerHTML = localStorage.user;
+} if (localStorage.user === undefined) {
+    document.getElementById("mostrarEmail").innerHTML = "Login";
+};
+
+if (document.getElementById("mostrarEmail").textContent == "Login") {
+    window.location = "./login.html"
+};
+
+
 
     
 
